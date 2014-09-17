@@ -1,0 +1,6 @@
+mixin flex-menu()
+    +b('nav').flex-menu
+        +e('ul').items
+            each i,k in attributes
+                -var cls='_'+k
+                +e(class=['item',cls])= i

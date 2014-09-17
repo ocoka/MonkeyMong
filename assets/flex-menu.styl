@@ -1,0 +1,33 @@
+.flex-menu
+    &__items
+        display flex
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 18px;
+        justify-content: space-around;
+        list-style-type: none;
+        align-content: flex-start;
+        align-items: flex-end;
+
+    &__item
+        background-color #cecece
+        background-image linear-gradient(left,#cecece 0%,#efefef 100%)
+        border 1px solid #aaa
+        border-radius 2px
+        height 32px
+        padding 4px 6px
+        line-height @height
+        for $i in men women unisex brands sale
+            &_{$i}
+                $img_path=selector()
+                $img_path=substr($img_path,1)
+                height 42px
+                &:before
+                    content:''
+                    display:block;
+                    float:left;
+                    border:1px solid white;
+                    width:48px
+                    height:32px;
+                    $path="../img/"+$img_path+".png"
+                    background-image:url($path)

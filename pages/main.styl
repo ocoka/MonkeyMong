@@ -1,0 +1,32 @@
+@import nib
+
+global-reset()
+
+.clf
+  clearfix()
+
+one_=5
+
+indent(val)
+    intendations = {
+        'pad-top':padding-top,
+        'pad-bot':padding-bottom,
+        'marg-top':margin-top,
+        'marg-bot':margin-bottom
+    }
+    indent_both={
+        'marg':margin,
+        'pad':padding
+    }
+    for key, value in intendations
+        .{key}-{val}
+            {value}: (val*one_)px
+    for key, value in indent_both
+        .{key}-{val}
+            {value}: (val*one_)px 0
+
+/*for ia in (1..50)
+    indent(ia)*/
+
+@import "../assets/flex-menu.styl"
+

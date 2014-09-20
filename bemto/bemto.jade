@@ -149,14 +149,11 @@ mixin b(tag, isElement)
     - bemto_classes = bemto_classes.split(' ');
     - var bemto_block = bemto_classes[0].match(new RegExp('^(((?!' + bemto_settings_element + '|' + bemto_settings_modifier +').)+)'))[1]
 
-
-
     if !isElement
       - bemto_chain[bemto_chain.length] = bemto_block
       - bemto_classes[0] = bemto_classes[0]
     else
       - bemto_classes[0] = bemto_chain[bemto_chain.length-1] + bemto_settings_element + bemto_classes[0]
-
 
     - var current_block = (isElement ? bemto_chain[bemto_chain.length-1] + bemto_settings_element : '') + bemto_block
 

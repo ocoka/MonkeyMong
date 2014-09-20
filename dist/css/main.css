@@ -1,4 +1,4 @@
-html,
+ html,
 body,
 div,
 span,
@@ -212,4 +212,91 @@ a img {
   width: 48px;
   height: 32px;
   background-image: url("../img/flex-menu__item_sale.png");
+}
+.doc-entry__att-marker {
+  max-width: 18px;
+  overflow: hidden;
+  background-color: #d3d3d3;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  white-space: nowrap;
+  margin-left: 5px;
+  display: inline-block;
+  text-align: left;
+  -webkit-transition: max-width 0.5s;
+  -moz-transition: max-width 0.5s;
+  -o-transition: max-width 0.5s;
+  -ms-transition: max-width 0.5s;
+  transition: max-width 0.5s;
+  padding-right: 5px;
+}
+.doc-entry__att-marker:hover {
+  max-width: 100px;
+  width: auto;
+}
+.doc-entry__att-marker_array:before {
+  display: inline-block;
+  content: 'a';
+  width: 20px;
+  border: 1px solid #006400;
+  margin-right: 5px;
+  background-color: #008000;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  text-align: center;
+}
+.doc-entry__att-marker_number:before {
+  display: inline-block;
+  content: 'n';
+  width: 20px;
+  border: 1px solid #006400;
+  margin-right: 5px;
+  background-color: #008000;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  text-align: center;
+}
+.doc-entry__att-marker_text:before {
+  display: inline-block;
+  content: 't';
+  width: 20px;
+  border: 1px solid #006400;
+  margin-right: 5px;
+  background-color: #008000;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  text-align: center;
+}
+.doc-entry__att-marker_static:before {
+  display: inline-block;
+  content: 's';
+  width: 20px;
+  margin-right: 5px;
+  border: 1px solid #8b0000;
+  background-color: #f00;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  text-align: center;
+}
+.doc-entry__att-marker_dynamic:before {
+  display: inline-block;
+  content: 'd';
+  width: 20px;
+  margin-right: 5px;
+  border: 1px solid #8b0000;
+  background-color: #f00;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  text-align: center;
+}
+.doc-entry__att-marker_inheritance:before {
+  display: inline-block;
+  content: 'i';
+  width: 20px;
+  margin-right: 5px;
+  border: 1px solid #8b0000;
+  background-color: #f00;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  text-align: center;
 }

@@ -1,0 +1,17 @@
+mixin doc-att(name,markers)
+    +e("dt").att
+        +e("span").att-name= name
+        if markers instanceof Array
+            each marker in markers
+                -var cls="att-marker_"+marker
+                +e("span")&attributes({class:cls})= marker
+    +e("dd").att-value: block
+mixin doc-entry(name)
+    +b("article").doc-entry
+        +e("h3").title= name
+        if block
+            block
+mixin doc-atts()
+    +e("dl").atts
+        if block
+            block

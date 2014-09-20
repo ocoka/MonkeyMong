@@ -1,0 +1,39 @@
+.doc-entry
+    &__att-marker
+        max-width 18px
+        overflow hidden
+        background-color lightgrey
+        border-radius 6px
+        white-space nowrap
+        margin-left 5px
+        display inline-block
+        text-align left
+        transition max-width 0.5s
+        padding-right 5px
+        &:hover
+            max-width 100px
+            width auto
+        for $i in array number text
+            &_{$i}
+                $cnt=substr($i,0,1)
+                &:before
+                    display inline-block
+                    content s("'%s'",$cnt)
+                    width 20px
+                    border 1px solid darkgreen
+                    margin-right 5px
+                    background-color green
+                    border-radius 6px
+                    text-align center
+        for $i in static dynamic inheritance
+            &_{$i}
+                $cnt=substr($i,0,1)
+                &:before
+                    display inline-block
+                    content s("'%s'",$cnt)
+                    width 20px
+                    margin-right 5px
+                    border 1px solid darkred
+                    background-color red
+                    border-radius 6px
+                    text-align center

@@ -2,6 +2,7 @@
    Created by ocoka on 07.09.14.
 include ../bemto/bemto
 include ../assets/flex-menu
+include ../assets/doc-entry
 
 doctype html
 html
@@ -9,4 +10,11 @@ html
         title Test this out
         link(href='css/main.css',rel='stylesheet')
     body
-        +flex-menu(women='Женщинам',men='Мужчинам',unisex='Унисекс',brand='Бренды',sale='Скидки',l1='Уровень1',l2='Уровень6',l3='Уровень5',l4='Уровень4',l5='Уровень3',l6='Уровень2')
+        +doc-entry("Amanda")
+            +doc-atts
+                -var n=1
+                while n<10
+                    -name="TEST"+n
+                    +doc-att(name,["array","static"]) test#{n}
+                    -n++
+        div.footer end of page

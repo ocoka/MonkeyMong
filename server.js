@@ -11,8 +11,6 @@ app.use(cookie());
 app.use(bodyparser.raw());
 app.use(
     function(req,res,next){
-    	
-	
     }
 );
 if (process.env.NODE_ENV !== 'production') {

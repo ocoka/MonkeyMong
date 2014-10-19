@@ -1,0 +1,9 @@
+.iblock {
+  font-size: 12pt;
+  font-weight: bold;
+  font-family: Arial;
+}
+.iblock__header {
+  border: 1px solid #808080;
+  border-radius: 2px;
+}
